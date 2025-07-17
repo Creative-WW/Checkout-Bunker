@@ -1,4 +1,4 @@
-/*style.css*/
+/* style.css */
 
 body {
   margin: 0;
@@ -9,7 +9,8 @@ body {
   padding: 50px 0;
 }
 
-h1, footer {
+h1,
+footer {
   position: fixed;
   width: 100%;
   left: 0;
@@ -26,26 +27,30 @@ h1 {
   font-size: 1.4rem;
 }
 
-#ar-button-container {
+/* Responsive AR button */
+#ar-button {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: clamp(325px, 100vw, 500px);
-  aspect-ratio: 1 / 1;
+  width: 275vw; /* responsive width */
+  height: 275vw; /* responsive height */
+  max-width: 400px; /* max size */
+  max-height: 400px; /* max size */
   transform: translate(-50%, -50%);
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1001; /* above header/footer */
+  margin: 0; /* reset margin */
 }
 
-#ar-button-container img {
+#ar-button img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s;
   display: block;
 }
 
-#ar-button-container img:hover {
+#ar-button img:hover {
   transform: scale(1.05);
 }
 
@@ -76,10 +81,7 @@ footer img {
 }
 
 .disabled-btn {
-  position: fixed;
-  top: 17.75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
   background: #ea0000;
@@ -88,6 +90,4 @@ footer img {
   border-radius: 4px;
   cursor: not-allowed;
   opacity: 0.6;
-  margin-top: 0;
-  z-index: 1003;
 }

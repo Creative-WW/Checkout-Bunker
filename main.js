@@ -1,5 +1,3 @@
-// main.js
-
 (() => {
   const config = window.projectConfig;
 
@@ -32,11 +30,20 @@
         </a>
       `;
     } else if (isAndroid) {
-      const intentUrl = `intent://arvr.google.com/scene-viewer/1.0?file=${encodeURIComponent(config.glb)}&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;end;`;
+      // Use model-viewer for Android AR support
       arButton.innerHTML = `
-        <a href="${intentUrl}" aria-label="View ${config.title} in AR on Android">
-          <img src="${config.image}" alt="View in AR" loading="eager" />
-        </a>
+        <model-viewer
+          src="${config.glb}"
+          ar
+          ar-modes="scene-viewer webxr quick-look"
+          autoplay
+          camera-controls
+          ios-src="${config.usdz}"
+          style="width: 100%; height: 100%;"
+          alt="View ${config.title} in AR"
+        >
+          <img slot="poster" src="${config.image}" alt="View in AR" loading="eager" />
+        </model-viewer>
       `;
     } else {
       fallback.textContent = 'AR is only supported on iOS and Android devices.';

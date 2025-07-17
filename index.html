@@ -105,7 +105,7 @@
         </a>
       `;
     } else if (isAndroid) {
-      const intentUrl = `https://arvr.google.com/scene-viewer/1.0?file=https://yourhost.com/path/to/AR_DQ8664.glb&mode=ar_preferred`;
+     const intentUrl = `intent://arvr.google.com/scene-viewer/1.0?file=${encodeURIComponent(glbFile)}&mode=ar_preferred#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;end;`;
 
       arButton.innerHTML = `
         <a href="${intentUrl}" aria-label="View Checkout Bunker in AR on Android">

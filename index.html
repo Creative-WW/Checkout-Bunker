@@ -91,7 +91,7 @@
   (function () {
     const arButton = document.getElementById('ar-button');
     const fallback = document.getElementById('fallback');
-    const imgSrc = 'Checkout Rack.png';
+    const imgSrc = 'Checkout Rack.png'; // Update this if using a new image
     const usdzFile = 'AR_DQ8664.usdz';
     const glbFile = 'https://creative-ww.github.io/artest/AR_DQ8664.glb';
 
@@ -105,10 +105,11 @@
         </a>
       `;
     } else if (isAndroid) {
-      const viewerUrl = \`https://arvr.google.com/scene-viewer/1.0?file=\${encodeURIComponent(glbFile)}&mode=ar_preferred\`;
+      const intentUrl = `https://arvr.google.com/scene-viewer/1.0?file=https://yourhost.com/path/to/AR_DQ8664.glb&mode=ar_preferred`;
+
       arButton.innerHTML = `
-        <a href="\${viewerUrl}" target="_blank" aria-label="View Checkout Bunker in AR on Android">
-          <img src="\${imgSrc}" alt="View in AR" loading="eager" />
+        <a href="${intentUrl}" aria-label="View Checkout Bunker in AR on Android">
+          <img src="${imgSrc}" alt="View in AR" loading="eager" />
         </a>
       `;
     } else {

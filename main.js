@@ -35,7 +35,7 @@
     container.innerHTML = `<a rel="ar" href="${cfg.usdz}" aria-label="View ${cfg.title} in AR">${imgHTML}</a>`;
 
   } else if (isAndroid) {
-    if (!cfg.glb || !cfg.glb.startsWith("https://")) {
+    if (!cfg.glb || !cfg.glb.startsWith("https://creative-ww.github.io/Checkout-Bunker/assets/AR_DQ8864.glb")) {
       fallback.textContent = "GLB model must be hosted on HTTPS for Android AR.";
       container.innerHTML = `<button class="disabled-btn" disabled>AR Not Available</button>`;
       return;

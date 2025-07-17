@@ -1,4 +1,4 @@
-# Q-Rack
+# Checkout-Bunker
 
 AR experience available for IOS and Android only
 

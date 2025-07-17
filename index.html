@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title></title>
+  <title>Loading…</title>
   <meta name="description" id="meta-description" content="" />
   <meta name="theme-color" content="#E10600" />
 
+  <link rel="preload" href="assets/Q Rack.png" as="image" />
+  <link rel="preload" href="https://creative-ww.github.io/Q-Rack/assets/AR_DQ3358.glb" as="fetch" crossorigin />
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- model-viewer for Android fallback -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <h1 id="project-title"></h1>
+  <h1 id="project-title">Loading…</h1>
 
   <main>
     <div id="ar-button" role="region" aria-label="AR Launch Button"></div>

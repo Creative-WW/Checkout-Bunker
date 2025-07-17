@@ -3,23 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Loading…</title>
+  <title id="page-title">Loading...</title>
   <meta name="description" id="meta-description" content="" />
   <meta name="theme-color" content="#E10600" />
 
-  <link rel="preload" href="assets/Checkout Bunker.png" as="image" />
-  <link rel="preload" href="https://creative-ww.github.io/Checkout-Bunker/assets/AR_DQ8864.glb" as="fetch" crossorigin />
-
   <link rel="stylesheet" href="style.css" />
-
-  <!-- model-viewer for Android AR -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <h1 id="project-title">Loading…</h1>
+  <h1 id="project-title">Loading...</h1>
 
   <main>
-    <div id="ar-button-container" role="region" aria-label="AR Launch Button"></div>
+    <div id="ar-button" role="region" aria-label="AR Launch Button"></div>
     <div class="fallback" id="fallback" aria-live="polite"></div>
   </main>
 
@@ -28,7 +22,7 @@
     <div>© 2025 Display Quest. All rights reserved.</div>
   </footer>
 
-  <script src="config.js"></script>
+  <script src="config.js" defer></script>
   <script src="main.js" defer></script>
 </body>
 </html>
